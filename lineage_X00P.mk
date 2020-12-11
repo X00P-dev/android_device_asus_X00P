@@ -12,20 +12,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
 # Inherit common Pixel Experience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
-
-# Pixel customization
-TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # Inherit device stuff
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Device identifiers.
 PRODUCT_DEVICE := X00P
-PRODUCT_NAME := aosp_X00P
+PRODUCT_NAME := lineage_X00P
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_X00PD
 PRODUCT_MANUFACTURER := asus
